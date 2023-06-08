@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decimal Bank|Statements</title>
+    <link rel="stylesheet" href="stat.css" />
+    <link rel="icon" type="image/x-icon" href="imgs/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <script src="stat.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <section class="header">
+        <nav class="header__nav">
+          <img class="header__logo" src="svg/logo.svg" alt="" />
+          <p class="header__title">Decimal Bank</p>
+
+          <ul class="header__links">
+            <li class="header__list">
+              <a class="header__item" href="/index.html">Home</a>
+              <span class="span">•</span>
+            </li>
+            <li class="header__list">
+              <a class="header__item" href="#">Apply for a Bank Account</a>
+              <span class="span">•</span>
+            </li>
+            <li class="header__list">
+              <a class="header__item" href="#">Mortgage Products</a>
+              <span class="span">•</span>
+            </li>
+            <li class="header__list">
+              <a class="header__item" href="/personalacc.html"
+                >Personal Account</a
+              >
+              <span class="span">•</span>
+            </li>
+            <li class="header__list">
+              <a class="header__item" href="/login.html">Log In</a>
+            </li>
+            <span class="span">•</span>
+            <li class="header__list">
+              <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+            </li>
+          </ul>
+          <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+
+            <ul class="menu__box">
+              <li><a class="menu__item" href="/index.html">Home</a></li>
+              <li><a class="menu__item" href="#">Apply</a></li>
+              <li><a class="menu__item" href="#">Mortgage Products</a></li>
+              <li>
+                <a class="menu__item" href="/personalacc.html"
+                  >Personal Account</a
+                >
+              </li>
+              <li><a class="menu__item" href="/login.html">Log In</a></li>
+            </ul>
+          </div>
+        </nav>
+        <hr />
+      </section>
+    </header>
+    <main>
+      <section class="statpgage">
+        <div class="statpage__container container">
+          <div class="statpage__top">
+            <div class="statpage__topleft">
+              <h1 class="statpage__topleft-title">Decimal Bank</h1>
+              <p class="statpage__topleft-address">
+                61 Hackworks Road <br />Pontefract<br />WF8 3PG
+              </p>
+            </div>
+            <div class="statpage__topright">
+              <h1 class="statpage__topright-name">Keven Cunha</h1>
+              <p class="statpage__topright-account">
+                12-12-12 <br />12345678 <br />Personal Bank
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="statpage__middle">
+          <div class="statpage__balance">
+            <h1 class="statpage__balance-title-1">Balance:</h1>
+            <h1 class="statpage__balance-title-2">Available <br />Balance:</h1>
+          </div>
+          <div class="statpage__amount">
+            <div class="statpage__amount-1">€1,232</div>
+            <div class="statpage__amount-2">€2,931</div>
+          </div>
+        </div>
+        <div class="statpage__container container">
+          <div class="statpage__bottom">
+            <h1 class="statpage__bottom-title">Pending</h1>
+            <hr />
+            <div class="statpage__bottom-column">
+              <p>Date ↓</p>
+              <p>Day ↓</p>
+              <p>Description ↓</p>
+              <p>Reference</p>
+              <p>Transactions</p>
+              <p>Balance</p>
+            </div>
+            <hr />
+            <div class="statpage__bottom-column-info">
+              <p>Date</p>
+              <p>Day</p>
+              <p>Description</p>
+              <p>Reference</p>
+              <p>Transactions</p>
+              <p>Balance</p>
+            </div>
+          </div>
+          <div class="statpage__bottom-2">
+            <h1 class="statpage__bottom-title">Transactions</h1>
+            <hr />
+            <div class="statpage__bottom-column">
+              <p>Date ↓</p>
+              <p>Day ↓</p>
+              <p>Description ↓</p>
+              <p>Reference</p>
+              <p>Transactions</p>
+              <p>Balance</p>
+            </div>
+            <hr />
+            <div class="statpage__bottom-column-info">
+              <p>Date</p>
+              <p>Day</p>
+              <p>Description</p>
+              <p>Reference</p>
+              <p>Transactions</p>
+              <p>Balance</p>
+            </div>
+          </div>
+          <a class="statpage__button-bottom" href="#">MORE TRANSACTIONS</a>
+        </div>
+        <div class="statpage__trasactionrange">
+          <p class="statpage__trasactionrange-title">
+            SHOW TRANSACTIONS DATE RANGE:
+          </p>
+          <div class="statpage__trasactionrange-buttoms">
+            <a class="statpage__trasactionrange-btn" href="">DATE</a>
+            <p class="statpage__trasactionrange-title-1">To</p>
+            <a class="statpage__trasactionrange-btn" href="">DATE</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="footer">
+        <hr />
+        <div class="footer__nav">
+          <ul class="footer__item-list">
+            <ul class="footer__left-side">
+              <li>
+                <img class="footer__logo" src="svg/logo.svg" alt="" />
+              </li>
+              <li class="footer__address">
+                <p>61 Hackworks Road</p>
+                <p>Pontefract</p>
+                <p>WF8 3PG</p>
+              </li>
+            </ul>
+            <ul class="footer__right-side">
+              <a class="footer__item" href="">Personal</a>
+
+              <a class="footer__item" href="">Premiere Banking</a>
+
+              <a class="footer__item" href="">Business Banking</a>
+
+              <a class="footer__item" href="">Download the app</a>
+
+              <a class="footer__item" href="">Banking Loans</a>
+
+              <a class="footer__item" href="">Credit Cards</a>
+
+              <a class="footer__item" href="">Mortgages</a>
+
+              <img
+                id="footer-logo"
+                class="footer__logo"
+                src="svg/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                alt=""
+              />
+            </ul>
+          </ul>
+        </div>
+      </section>
+    </footer>
+  </body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Raleway:wght@1,200&display=swap");
+  </style>
+</html>
