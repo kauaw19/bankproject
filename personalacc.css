@@ -307,6 +307,10 @@ hr {
   text-align: center;
 }
 
+.account-options--hide {
+  display: none !important;
+}
+
 @media (max-width: 1000px) {
   .hero__line {
     display: none;

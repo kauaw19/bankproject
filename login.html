@@ -23,7 +23,7 @@
 
           <ul class="header__links">
             <li class="header__list">
-              <a class="header__item" href="/index.html">Home</a>
+              <a class="header__item" href="index.html">Home</a>
               <span class="span">•</span>
             </li>
             <li class="header__list">
@@ -35,13 +35,13 @@
               <span class="span">•</span>
             </li>
             <li class="header__list">
-              <a class="header__item" href="/personalacc.html"
+              <a class="header__item" href="personalacc.html"
                 >Personal Account</a
               >
               <span class="span">•</span>
             </li>
             <li class="header__list">
-              <a class="header__item" href="/login.html">Log In</a>
+              <a class="header__item" href="login.html">Log In</a>
             </li>
             <span class="span">•</span>
             <li class="header__list">
@@ -55,15 +55,18 @@
             </label>
 
             <ul class="menu__box">
-              <li><a class="menu__item" href="/index.html">Home</a></li>
+              <li><a class="menu__item" href="index.html">Home</a></li>
               <li><a class="menu__item" href="#">Apply</a></li>
               <li><a class="menu__item" href="#">Mortgage Products</a></li>
               <li>
-                <a class="menu__item" href="/personalacc.html"
+                <a class="menu__item" href="personalacc.html"
                   >Personal Account</a
                 >
               </li>
-              <li><a class="menu__item" href="/login.html">Log In</a></li>
+              <li><a class="menu__item" href="login.html">Log In</a></li>
+              <li>
+                <i class="bi bi-brightness-high-fill" id="toggleDark-1"></i>
+              </li>
             </ul>
           </div>
         </nav>
@@ -72,19 +75,34 @@
     </header>
     <main>
       <section class="login">
-        <div class="login__items">
-          <h1 class="login__title">Personal Bank Account Log In</h1>
-          <p class="login__top-desc">User ID:</p>
-          <input class="login__input-box" type="text" placeholder="ID:" />
-          <p class="login__top-desc">Password:</p>
-          <input
-            class="login__input-box"
-            type="text"
-            placeholder="Type password here"
-          />
-          <p></p>
-          <a class="login__login-btn" href=""> LOG IN</a>
-        </div>
+        <form id="loginForm">
+          <div class="login__items">
+            <h1 class="login__title">Personal Bank Account Log In</h1>
+            <p class="login__top-desc">User ID:</p>
+
+            <input
+              class="login__input-box"
+              type="text"
+              placeholder="ID"
+              id="input-box-id"
+            />
+            <p class="login__top-desc">Password:</p>
+            <input
+              type="password"
+              class="login__input-box"
+              placeholder="Type password here"
+              id="input-box-pass"
+            />
+            <p></p>
+            <span id="error-msg" style="color: red"></span>
+            <input
+              type="submit"
+              class="login__login-btn"
+              id="login-click"
+              value="LOG IN"
+            />
+          </div>
+        </form>
       </section>
     </main>
     <footer>
@@ -131,6 +149,5 @@
   </body>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap");
-    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Raleway:wght@1,200&display=swap");
   </style>
 </html>

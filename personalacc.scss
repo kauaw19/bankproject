@@ -359,6 +359,11 @@ hr {
     }
 }
 
+.account-options--hide {
+
+    display: none !important;
+}
+
 @media(max-width: 1000px) {
 
     .hero {

@@ -48,3 +48,11 @@ toggle1.addEventListener("click", function () {
     }
   }
 });
+
+const CheckLog = localStorage.getItem("LoggedIn");
+console.log(CheckLog);
+if (CheckLog == "Yes") {
+  document.getElementById("CheckPage").className = document
+    .getElementById("CheckPage")
+    .className.replace(/(?:^|\s)account-options--hide(?!\S)/g, "");
+}

@@ -1,6 +1,10 @@
 $maincolor: rgb(1, 145, 118);
 $font: 'Montserrat', sans-serif;
 
+.bi {
+    margin-left: 25px;
+}
+
 .header {
     margin: 0;
     padding: 0;
@@ -376,7 +380,12 @@ hr {
 .login {
     padding-block: 200px;
     text-align: left;
-    margin-left: 35%;
+    margin: auto;
+    width: 20%;
+
+    @media(max-width:900px) {
+        width: 50%;
+    }
 
     &__title {
         color: $maincolor;
@@ -389,24 +398,26 @@ hr {
         font-family: $font;
         letter-spacing: 1px;
         font-size: 13px;
+        margin-left: 7.5%;
     }
 
     &__input-box {
-        width: 150px;
+        width: 200px;
         padding: 8px 5px;
         border: transparent;
         background-color: rgb(226, 226, 226);
+        margin-left: 7.5%;
     }
 
     &__login-btn {
         background-color: $maincolor;
-        padding-right: 50px;
-        padding-left: 50px;
+        padding: 5px 50px;
+        border-radius: 5px;
         color: white;
         font-family: $font;
         text-align: center;
         text-decoration: none;
-        margin-left: 6.7%;
+        margin-left: 7.5%;
     }
 
 

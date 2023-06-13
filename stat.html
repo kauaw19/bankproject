@@ -22,7 +22,7 @@
 
           <ul class="header__links">
             <li class="header__list">
-              <a class="header__item" href="/index.html">Home</a>
+              <a class="header__item" href="index.html">Home</a>
               <span class="span">•</span>
             </li>
             <li class="header__list">
@@ -34,13 +34,13 @@
               <span class="span">•</span>
             </li>
             <li class="header__list">
-              <a class="header__item" href="/personalacc.html"
+              <a class="header__item" href="personalacc.html"
                 >Personal Account</a
               >
               <span class="span">•</span>
             </li>
             <li class="header__list">
-              <a class="header__item" href="/login.html">Log In</a>
+              <a class="header__item" href="login.html">Log In</a>
             </li>
             <span class="span">•</span>
             <li class="header__list">
@@ -63,6 +63,9 @@
                 >
               </li>
               <li><a class="menu__item" href="/login.html">Log In</a></li>
+              <li>
+                <i class="bi bi-brightness-high-fill" id="toggleDark-1"></i>
+              </li>
             </ul>
           </div>
         </nav>
@@ -80,7 +83,7 @@
               </p>
             </div>
             <div class="statpage__topright">
-              <h1 class="statpage__topright-name">Keven Cunha</h1>
+              <h1 class="statpage__topright-name" id="nameUser">Keven Cunha</h1>
               <p class="statpage__topright-account">
                 12-12-12 <br />12345678 <br />Personal Bank
               </p>
@@ -93,8 +96,8 @@
             <h1 class="statpage__balance-title-2">Available <br />Balance:</h1>
           </div>
           <div class="statpage__amount">
-            <div class="statpage__amount-1">€1,232</div>
-            <div class="statpage__amount-2">€2,931</div>
+            <div class="statpage__amount-1" id="Balance-1">€1,232</div>
+            <div class="statpage__amount-2" id="Balance-2">€2,931</div>
           </div>
         </div>
         <div class="statpage__container container">
@@ -111,11 +114,11 @@
             </div>
             <hr />
             <div class="statpage__bottom-column-info">
-              <p>Date</p>
+              <p id="dateHTML">Date</p>
               <p>Day</p>
-              <p>Description</p>
-              <p>Reference</p>
-              <p>Transactions</p>
+              <p id="descHTML">Description</p>
+              <p id="referenceHTML">Reference</p>
+              <p id="transactionsHTML">Transactions</p>
               <p>Balance</p>
             </div>
           </div>
