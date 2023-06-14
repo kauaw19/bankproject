@@ -1,6 +1,8 @@
 $maincolor: rgb(1, 145, 118);
 $font: 'Montserrat', sans-serif;
 
+
+
 hr {
     border: none;
     height: 1px;
@@ -445,10 +447,11 @@ hr {
         padding: 4px 30px;
         color: gray;
         border: 2px solid gray;
+
     }
 
     &__trasactionrange-title-1 {
-        color: gray;    
+        color: gray;
     }
 }
 

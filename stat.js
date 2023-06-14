@@ -44,23 +44,157 @@ toggle1.addEventListener("click", function () {
     }
   }
 });
+
+const usersJSON = localStorage.getItem("users");
+const users = JSON.parse(usersJSON);
+
 const Name = localStorage.getItem("Name");
-const userName = localStorage.getItem("username");
 const Balance = localStorage.getItem("Balance");
 const AvlbBalance = localStorage.getItem("AvlbBalance");
-const Date = localStorage.getItem("Date");
-const Description = localStorage.getItem("Description");
-const References = localStorage.getItem("Reference");
-const Type = localStorage.getItem("Type");
-const Transaction = localStorage.getItem("Transactions");
 
 document.getElementById("nameUser").innerHTML = Name;
 document.getElementById("Balance-1").innerHTML = "£" + Balance;
 document.getElementById("Balance-2").innerHTML = "£" + AvlbBalance;
 
-Transaction.forEach((element) => {
-  if (Type == pending) {
-  }
-  if (Type == completed) {
-  }
+const pendingTransactions = users.transactions.filter(
+  (transaction) => transaction.type === "pending"
+);
+const completedTransactions = users.transactions.filter(
+  (transaction) => transaction.type === "completed"
+);
+pendingTransactions.forEach((transaction) => {
+  const dateTable = document.createElement("table");
+  dateTable.style.margin = "0 auto";
+  dateTable.style.padding = "10px";
+
+  const dateRow = dateTable.insertRow();
+  const dateCell = dateRow.insertCell();
+
+  dateCell.textContent = transaction.date;
+
+  document.getElementById("pending-dateHTML").appendChild(dateTable);
+
+  const descTable = document.createElement("table");
+  descTable.style.margin = "0 auto";
+  descTable.style.padding = "10px";
+
+  const descRow = descTable.insertRow();
+  const descCell = descRow.insertCell();
+
+  descCell.textContent = transaction.description;
+
+  document.getElementById("pending-descHTML").appendChild(descTable);
+
+  const refTable = document.createElement("table");
+  refTable.style.margin = "0 auto";
+  refTable.style.padding = "10px";
+
+  const refRow = refTable.insertRow();
+  const refCell = refRow.insertCell();
+
+  refCell.textContent = transaction.reference;
+
+  document.getElementById("pending-refHTML").appendChild(refTable);
+
+  const dayTable = document.createElement("table");
+  dayTable.style.margin = "0 auto";
+  dayTable.style.padding = "10px";
+
+  const dayRow = dayTable.insertRow();
+  const dayCell = dayRow.insertCell();
+
+  dayCell.textContent = transaction.day;
+
+  document.getElementById("pending-dayHTML").appendChild(dayTable);
+
+  const transacTionTable = document.createElement("table");
+  transacTionTable.style.margin = "0 auto";
+  transacTionTable.style.padding = "10px";
+
+  const transacTionRow = transacTionTable.insertRow();
+  const transacTionCell = transacTionRow.insertCell();
+
+  transacTionCell.textContent = transaction.transacTion;
+
+  document
+    .getElementById("pending-transactionHTML")
+    .appendChild(transacTionTable);
+
+  const balanceTable = document.createElement("table");
+  balanceTable.style.margin = "0 auto";
+  balanceTable.style.padding = "10px";
+
+  const balanceRow = balanceTable.insertRow();
+  const balanceCell = balanceRow.insertCell();
+
+  balanceCell.textContent = transaction.balance;
+
+  document.getElementById("pending-balanceHTML").appendChild(balanceTable);
+});
+completedTransactions.forEach((transaction) => {
+  const dateTable = document.createElement("table");
+  dateTable.style.margin = "0 auto";
+  dateTable.style.padding = "10px";
+
+  const dateRow = dateTable.insertRow();
+  const dateCell = dateRow.insertCell();
+
+  dateCell.textContent = transaction.date;
+
+  document.getElementById("done-dateHTML").appendChild(dateTable);
+
+  const descTable = document.createElement("table");
+  descTable.style.margin = "0 auto";
+  descTable.style.padding = "10px";
+
+  const descRow = descTable.insertRow();
+  const descCell = descRow.insertCell();
+
+  descCell.textContent = transaction.description;
+
+  document.getElementById("done-descHTML").appendChild(descTable);
+
+  const refTable = document.createElement("table");
+  refTable.style.margin = "0 auto";
+  refTable.style.padding = "10px";
+
+  const refRow = refTable.insertRow();
+  const refCell = refRow.insertCell();
+
+  refCell.textContent = transaction.reference;
+
+  document.getElementById("done-refHTML").appendChild(refTable);
+
+  const dayTable = document.createElement("table");
+  dayTable.style.margin = "0 auto";
+  dayTable.style.padding = "10px";
+
+  const dayRow = dayTable.insertRow();
+  const dayCell = dayRow.insertCell();
+
+  dayCell.textContent = transaction.day;
+
+  document.getElementById("done-dayHTML").appendChild(dayTable);
+
+  const transacTionTable = document.createElement("table");
+  transacTionTable.style.margin = "0 auto";
+  transacTionTable.style.padding = "10px";
+
+  const transacTionRow = transacTionTable.insertRow();
+  const transacTionCell = transacTionRow.insertCell();
+
+  transacTionCell.textContent = transaction.transacTion;
+
+  document.getElementById("done-transactionHTML").appendChild(transacTionTable);
+
+  const balanceTable = document.createElement("table");
+  balanceTable.style.margin = "0 auto";
+  balanceTable.style.padding = "10px";
+
+  const balanceRow = balanceTable.insertRow();
+  const balanceCell = balanceRow.insertCell();
+
+  balanceCell.textContent = transaction.balance;
+
+  document.getElementById("done-balanceHTML").appendChild(balanceTable);
 });

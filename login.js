@@ -80,18 +80,27 @@ const users = [
         description: "Deposit",
         reference: "ABC123",
         type: "completed",
+        day: "Thursday",
+        balance: "£1100",
+        transacTion: "143",
       },
       {
         date: "2023-06-03",
         description: "Withdrawal",
         reference: "DEF456",
         type: "completed",
+        day: "Saturday",
+        balance: "£1080",
+        transacTion: "145",
       },
       {
         date: "2023-06-06",
         description: "Purchase",
         reference: "GHI789",
         type: "pending",
+        day: "Tuesday",
+        balance: "£1000",
+        transacTion: "144",
       },
     ],
   },
@@ -107,18 +116,27 @@ const users = [
         description: "Deposit",
         reference: "JKL012",
         type: "completed",
+        day: "Friday",
+        balance: "£5500",
+        transacTion: "2938",
       },
       {
         date: "2023-06-04",
         description: "Purchase",
         reference: "MNO345",
         type: "completed",
+        day: "Sunday",
+        balance: "£5300",
+        transacTion: "2939",
       },
       {
         date: "2023-06-07",
         description: "Withdrawal",
         reference: "PQR678",
         type: "pending",
+        day: "Wednesday",
+        balance: "£5000",
+        transacTion: "2340",
       },
     ],
   },
@@ -139,37 +157,19 @@ loginForm.addEventListener("submit", function (event) {
     var name = user.name;
     var balance = user.balance;
     var availableBalance = user.availableBalance;
-    const transactions = user.transactions;
 
     if (userName == idInput && userPass == passInput) {
-      localStorage.setItem("LoggedIn", "Yes");
       localStorage.setItem("Name", name);
-      localStorage.setItem("username", userName);
       localStorage.setItem("Balance", balance);
       localStorage.setItem("AvlbBalance", availableBalance);
-      localStorage.setItem("Transactions", transactions);
-      
-      const transactionDates = transactions.map(
-        (transaction) => transaction.date
-      );
-      const transactionDescription = transactions.map(
-        (transaction) => transaction.description
-      );
-      const transactionReference = transactions.map(
-        (transaction) => transaction.reference
-      );
-      const transactionType = transactions.map(
-        (transaction) => transaction.type
-      );
+      localStorage.setItem("LoggedIn", "Yes");
+      const player = user;
 
-      localStorage.setItem("Dates", JSON.stringify(transactionDates));
-      localStorage.setItem(
-        "Description",
-        JSON.stringify(transactionDescription)
-      );
-      localStorage.setItem("Reference", JSON.stringify(transactionReference));
-      localStorage.setItem("Type", JSON.stringify(transactionType));
-      window.location = "/bankproject/personalacc.html";
+      const usersJSON = JSON.stringify(player);
+
+      localStorage.setItem("users", usersJSON);
+
+      window.location = "/personalacc.html";
       return;
     } else if (userName != idInput && userPass != passInput) {
       localStorage.setItem("LoggedIn", "No");
@@ -177,10 +177,4 @@ loginForm.addEventListener("submit", function (event) {
         "<p>Username or Password incorect</p>";
     }
   });
-
-  //save user information into local storage, username and
-
-  // redirect to personal account page
-
-  // window.location = "/bankproject/personalacc.html";
 });
