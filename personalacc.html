@@ -12,6 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
     <script src="personalacc.js" defer></script>
+    <script src="logout-btn.js" defer></script>
   </head>
 
   <body>
@@ -42,7 +43,13 @@
                 <span class="span">•</span>
               </li>
               <li class="header__list">
-                <a class="header__item" href="login.html">Log In</a>
+                <a
+                  class="header__item"
+                  href="login.html"
+                  id="login-btn"
+                  onclick="change()"
+                  >Log In</a
+                >
               </li>
               <span class="span">•</span>
               <li class="header__list">

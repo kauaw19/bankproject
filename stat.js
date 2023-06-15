@@ -114,7 +114,7 @@ pendingTransactions.forEach((transaction) => {
   const transacTionRow = transacTionTable.insertRow();
   const transacTionCell = transacTionRow.insertCell();
 
-  transacTionCell.textContent = transaction.transacTion;
+  transacTionCell.textContent = transaction.transaction;
 
   document
     .getElementById("pending-transactionHTML")
@@ -183,7 +183,7 @@ completedTransactions.forEach((transaction) => {
   const transacTionRow = transacTionTable.insertRow();
   const transacTionCell = transacTionRow.insertCell();
 
-  transacTionCell.textContent = transaction.transacTion;
+  transacTionCell.textContent = transaction.transaction;
 
   document.getElementById("done-transactionHTML").appendChild(transacTionTable);
 
